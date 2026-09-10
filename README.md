@@ -138,14 +138,35 @@ The analysis includes:
 ```bash
 git clone <repository-url>
 cd web-scraping-books
-
+```
 ### 2. Install the required libraries
 
 ```bash
 pip install -r requirements.txt
-
+```
 ### 3. Run the web scraper
 
 ```bash
 python src/scraper.py
+```
+
+### 4. Run the analysis notebook
+
+Open:
+
+```text
+notebooks/analysis.ipynb
+ ```
+ 
+
+
+## Conclusion
+
+This project demonstrates an end-to-end data analytics workflow, starting from web scraping and data collection through data cleaning, exploratory data analysis, visualization, and insight generation.
+
+The final dataset contains 1,000 books with information about title, price, rating, category, availability, and product URL.
+
+The analysis found that book prices range from £10.00 to £59.99, with an average price of approximately £35.07. The correlation between book price and rating was approximately 0.028, indicating almost no linear relationship between price and rating.
+
+This project provided practical experience with Python, BeautifulSoup, requests, pandas, matplotlib, data cleaning, exploratory data analysis, and Git/GitHub.
 

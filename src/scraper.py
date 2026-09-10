@@ -102,10 +102,8 @@ def scrape_books():
 
 
 def clean_data(data):
-
     df = pd.DataFrame(data)
 
-    # Clean price
     df["price"] = (
         df["price"]
         .str.replace("£", "", regex=False)
@@ -114,7 +112,6 @@ def clean_data(data):
         .astype(float)
     )
 
-    # Convert rating words to numbers
     rating_mapping = {
         "One": 1,
         "Two": 2,
@@ -125,19 +122,18 @@ def clean_data(data):
 
     df["rating"] = df["rating"].map(rating_mapping)
 
-    # Clean availability
-   df["availability"] = (
-    df["availability"]
-    .str.replace("\n", "", regex=False)
-    .str.strip()
-)
+    df["availability"] = (
+        df["availability"]
+        .str.replace("\n", "", regex=False)
+        .str.strip()
+    )
 
-df["category"] = df["category"].replace(
-    ["Default", "Add a comment"],
-    "Unknown"
-)
+    df["category"] = df["category"].replace(
+        ["Default", "Add a comment"],
+        "Unknown"
+    )
 
-df = df.drop_duplicates()
+    df = df.drop_duplicates()
 
     return df
 

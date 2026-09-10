@@ -43,7 +43,7 @@ The dataset contains information for 1,000 books scraped across 50 pages.
 
 ## Project Structure
 
-```text
+```text 
 web-scraping-books/
 │
 ├── data/
@@ -58,7 +58,7 @@ web-scraping-books/
 ├── README.md
 ├── requirements.txt
 └── .gitignore
-
+```
 
 ## Data Collection
 
